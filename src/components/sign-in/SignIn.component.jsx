@@ -39,6 +39,11 @@ function SigninForm() {
       console.log(response);
       resetFormField();
     } catch (error) {
+      if (error.code == `auth/wrong-password`) {
+        alert("Wrong Password.");
+      } else if (error.code == `auth/user-not-found`) {
+        alert("User is not found.");
+      }
       console.log(error);
     }
   };
