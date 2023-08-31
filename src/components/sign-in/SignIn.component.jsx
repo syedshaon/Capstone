@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { signInWithGooglePopup, signInWithGoogleEmailAndPassword, createUserDocumentFromAuth } from "../../Utilities/firebase/firebase.utils";
 
 import "./signIn.style.scss";
 
 import Button from "../button/button.component";
 import FormInput from "../form-input/form-input.component";
+
+import { UserContext } from "../../contexts/user.context";
 
 const defaultForm = {
   displayName: "",
@@ -16,6 +18,8 @@ const defaultForm = {
 function SigninForm() {
   const [formVal, setFormVal] = useState(defaultForm);
   const { email, pw } = formVal;
+
+  const { setCurrentUser } = useContext(UserContext);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -32,11 +36,12 @@ function SigninForm() {
     setFormVal(defaultForm);
   };
 
-  const HangleSignInWithPW = async (e) => {
+  const HandleSignInWithPW = async (e) => {
     e.preventDefault();
     try {
-      const response = await signInWithGoogleEmailAndPassword(email, pw);
-      console.log(response);
+      const { user } = await signInWithGoogleEmailAndPassword(email, pw);
+      // console.log(userss);
+      setCurrentUser(user);
       resetFormField();
     } catch (error) {
       if (error.code == `auth/wrong-password`) {
@@ -60,7 +65,7 @@ function SigninForm() {
         <FormInput label="Password" type="password" id="pwd" name="pw" required value={pw} onChange={handleChange} />
 
         <div className="buttons-container">
-          <Button type="submit" onClick={HangleSignInWithPW} buttonType="inverted">
+          <Button type="submit" onClick={HandleSignInWithPW} buttonType="inverted">
             Sign In
           </Button>
           <Button buttonType="google" onClick={logGoogleUser}>
