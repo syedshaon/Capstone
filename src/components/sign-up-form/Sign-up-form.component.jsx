@@ -1,11 +1,12 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
+// import { useState, useContext } from "react";
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../Utilities/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 
 import "./sign-up-form.styles.scss";
 
 import Button from "../button/button.component";
-import { UserContext } from "../../contexts/user.context";
+// import { UserContext } from "../../contexts/user.context";
 
 const defaultForm = {
   displayName: "",
@@ -18,7 +19,7 @@ function SignUpForm() {
   const [formVal, setFormVal] = useState(defaultForm);
   const { displayName, email, pw, cpw } = formVal;
 
-  const { setCurrentUser } = useContext(UserContext);
+  // const { setCurrentUser } = useContext(UserContext);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -39,7 +40,7 @@ function SignUpForm() {
     try {
       const { user } = await createAuthUserWithEmailAndPassword(email, pw);
       // console.log(user);
-      setCurrentUser(user);
+      // setCurrentUser(user);
 
       const userCreationResponse = await createUserDocumentFromAuth(user, { displayName });
       console.log("user created");
