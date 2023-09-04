@@ -13,7 +13,8 @@
     "firebase": "^10.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.15.0"
+    "react-router-dom": "^6.15.0",
+    "vite-plugin-svgr": "^3.2.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -27,7 +28,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "jsdom": "^22.1.0",
-    "sass": "^1.64.2",
+    "sass": "^1.66.1",
     "vite": "^4.4.5",
     "vitest": "^0.34.1"
   }
