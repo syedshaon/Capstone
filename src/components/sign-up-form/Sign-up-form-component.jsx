@@ -1,11 +1,12 @@
 import { useState } from "react";
 // import { useState, useContext } from "react";
-import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../Utilities/firebase/firebase.utils";
-import FormInput from "../form-input/form-input.component";
+import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../Utilities/firebase/Firebase-utils";
 
-import "./sign-up-form.styles.scss";
+import FormInput from "../form-input/Form-input-component";
 
-import Button from "../button/button.component";
+import "./Sign-up-form-styles.scss";
+
+import Button from "../button/Button-component";
 // import { UserContext } from "../../contexts/user.context";
 
 const defaultForm = {

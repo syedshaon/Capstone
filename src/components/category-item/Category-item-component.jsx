@@ -1,4 +1,4 @@
-import "./category-item.styles.scss";
+import "./Category-item-styles.scss";
 
 import { Link } from "react-router-dom";
 

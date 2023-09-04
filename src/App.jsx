@@ -1,16 +1,17 @@
-import Home from "./routes/home/home.component";
+import Home from "./routes/home/Home-component";
 import { Routes, Route, Outlet } from "react-router-dom";
-import { Navigation } from "./routes/navigation/navigation.component";
-import Authentication from "./routes/authentication/authentication.component";
-import Checkout from "./routes/checkout/checkout.component";
+import { Navigation } from "./routes/navigation/Navigation-component";
+
+import Authentication from "./routes/authentication/Authentication-component";
+import Checkout from "./routes/checkout/Checkout-component";
 
 // const Shop = () => {
 //   return <h1>I am at the shop page.</h1>;
 // };
 
-import { Shop } from "./routes/shop/shop.component";
-import { ShopAll } from "./routes/shop/shop.component-category";
-import { Hats } from "./routes/shop/hats";
+import { Shop } from "./routes/shop/Shop-component";
+import { ShopAll } from "./routes/shop/Shop-component-category";
+
 const App = () => {
   return (
     <Routes>

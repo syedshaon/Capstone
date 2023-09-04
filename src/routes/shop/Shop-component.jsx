@@ -1,11 +1,11 @@
 import shop_data from "../../shop-data.json";
 import { useContext } from "react";
-import { productContext } from "../../contexts/products.context";
-import { categoriesContext } from "../../contexts/categories.context";
+import { productContext } from "../../contexts/Products-context";
+import { categoriesContext } from "../../contexts/Categories-context";
 
-import "./shop.style.scss";
+import "./Shop-style.scss";
 
-import ProductCard from "../../components/product-card/product-card.components";
+import ProductCard from "../../components/product-card/Product-card-components";
 
 export const Shop = () => {
   const { products } = useContext(productContext);

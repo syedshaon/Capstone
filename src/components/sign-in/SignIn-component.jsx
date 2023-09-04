@@ -1,11 +1,11 @@
 import { useState } from "react";
 // import { useState, useContext } from "react";
-import { signInWithGooglePopup, signInWithGoogleEmailAndPassword, createUserDocumentFromAuth } from "../../Utilities/firebase/firebase.utils";
+import { signInWithGooglePopup, signInWithGoogleEmailAndPassword, createUserDocumentFromAuth } from "../../Utilities/firebase/Firebase-utils";
 
-import "./signIn.style.scss";
+import "./SignIn-style.scss";
 
-import Button from "../button/button.component";
-import FormInput from "../form-input/form-input.component";
+import Button from "../button/Button-component";
+import FormInput from "../form-input/Form-input-component";
 
 // import { UserContext } from "../../contexts/user.context";
 

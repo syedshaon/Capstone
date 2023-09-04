@@ -1,7 +1,7 @@
-import "./cart-icon-style.scss";
+import "./Cart-icon-style.scss";
 import shoppingIcon from "../../assets/shoppingBag.svg";
 import { useContext } from "react";
-import { CartContext } from "../../contexts/cart.context";
+import { CartContext } from "../../contexts/Cart-context";
 
 function CartIcon() {
   const { isCartOpen, setIsCartOpen, cartItems } = useContext(CartContext);

@@ -1,11 +1,11 @@
 import { Routes, Link } from "react-router-dom";
 
-import "./cart-Drop-Down.style.scss";
-import Button from "../button/button.component";
-import CartItem from "../cart-item/cart-item.component";
+import "./Cart-Drop-Down.style.scss";
+import Button from "../button/Button-component";
+import CartItem from "../cart-item/Cart-item-component";
 
 import { useContext } from "react";
-import { CartContext } from "../../contexts/cart.context";
+import { CartContext } from "../../contexts/Cart-context";
 
 function CartDropdown() {
   const { cartItems } = useContext(CartContext);
