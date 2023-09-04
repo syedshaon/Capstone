@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import { UserContext } from "../../contexts/User-context";
 import { CartContext } from "../../contexts/Cart-context";
 
-import Icon from "../../assets/Crown.svg";
+// import Icon from "../../assets/Crown.svg";
 import "./Navigation-style.scss";
 
 import CartIcon from "../../components/cart-icon/Cart-icon-component";
@@ -24,7 +24,8 @@ export const Navigation = () => {
     <>
       <nav className="navigation">
         <Link className="logo-container" to="/">
-          <img src={Icon} alt="crown logo" className="logo" />
+          {/* <img src={Icon} alt="crown logo" className="logo" /> */}
+          <h3>Capstone Shop</h3>
         </Link>
 
         <div className="nav-links-container">
