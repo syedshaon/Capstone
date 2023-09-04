@@ -2,8 +2,10 @@ import shop_data from "../../shop-data.json";
 import { useContext } from "react";
 import { productContext } from "../../contexts/products.context";
 import { categoriesContext } from "../../contexts/categories.context";
-import ProductCard from "../../components/product-card/product-card.components";
+
 import "./shop.style.scss";
+
+import ProductCard from "../../components/product-card/product-card.components";
 
 export const Shop = () => {
   const { products } = useContext(productContext);
