@@ -2,7 +2,7 @@ import { Routes, Link, Outlet } from "react-router-dom";
 import { useState, useContext } from "react";
 import { UserContext } from "../../contexts/User-context";
 import { CartContext } from "../../contexts/Cart-context";
-import Icon from "../../assets/Crown.svg";
+
 import Icon from "../../assets/Crown.svg";
 import "./Navigation-style.scss";
 
